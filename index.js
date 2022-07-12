@@ -5,6 +5,7 @@ function newImage(url, left, bottom) {
   Entity.style.left = left + "px";
   Entity.style.bottom = bottom + "px";
   document.body.append(Entity);
+  return Entity;
 }
 
 newImage("assets/green-character.gif", 100, 100);
@@ -16,16 +17,14 @@ newImage("assets/well.png", 500, 425);
 
 function newItem(url, left, bottom) {
   let Entity = newImage(url, left, bottom);
-  Entity.addEventListener("click", () => {
+  Entity.addEventListener("dblclick", () => {
     Entity.remove();
   });
 }
 
 newItem("assets/sword.png", 500, 405);
-newItem("assets/shield.png", 165, 185);
+newItem("assets/sheild.png", 165, 185);
 newItem("assets/staff.png", 600, 100);
-
-
 
 // Just to remember code v
 // let sword = document.createElement("img");
